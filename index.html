@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RemoteCode</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+/* --- Reset & Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-main: #0f172a;
+    --text-muted: #475569;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --border-color: #e2e8f0;
+    --max-width: 1100px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* --- Layout Utilities --- */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* --- Component Styles --- */
+.badge {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--text-main);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: var(--bg-secondary);
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-section .subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* --- Mission & Stats Section --- */
+.mission-text h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.mission-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.stats-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background: var(--bg-secondary);
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item h3 {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+/* --- Values Section --- */
+.values-section {
+    border-top: 1px solid var(--border-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    color: var(--text-muted);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    border: 1px solid var(--border-color);
+    padding: 40px 30px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+}
+
+.value-card .icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background-color: var(--bg-secondary);
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cta-section p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Responsive Media Queries --- */
+@media (max-width: 768px) {
+    .grid-2, .values-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.25rem;
+    }
+    
+    .stats-box {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+    
+  </style>
+</head>
+<body>
+
+    <header class="hero-section">
+        <div class="container">
+            <span class="badge">Built for the Future</span>
+            <h1>We code from everywhere,<br>built as one team.</h1>
+            <p class="subtitle">RemoteCode is an open, globally distributed company. We believe great work isn't bound by office walls, borders, or time zones.</p>
+        </div>
+    </header>
+
+    <section class="mission-section">
+        <div class="container grid-2">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>We are building tools that empower developers worldwide. By operating entirely in the open and hiring talent regardless of geography, we foster a culture of ultimate flexibility, trust, and high performance.</p>
+            </div>
+            <div class="stats-box">
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Remote & Async</p>
+                </div>
+                <div class="stat-item">
+                    <h3>25+</h3>
+                    <p>Countries Represented</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Open</h3>
+                    <p>Source & Core Value</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Work</h2>
+                <p>Operating a global, open company requires a distinct set of cultural pillars.</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="icon">🌍</div>
+                    <h3>Work from Anywhere</h3>
+                    <p>Your desk can be in Tokyo, Paris, or a cabin in the woods. You own your schedule and your environment.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="icon">📖</div>
+                    <h3>Radical Transparency</h3>
+                    <p>As an open company, our roadmaps, decisions, and documentation are public by default. Everyone has a voice.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="icon">⏳</div>
+                    <h3>Asynchronous First</h3>
+                    <p>We minimize pointless meetings. We communicate deeply through writing, allowing everyone to work in their zone of genius.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Want to build the future with us?</h2>
+            <p>We are always looking for passionate engineers, designers, and thinkers to join our global collective.</p>
+            <a href="#" class="btn">View Open Roles</a>
+        </div>
+    </section>
+
+</body>
+</html>
