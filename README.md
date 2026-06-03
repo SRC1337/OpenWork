@@ -9,6 +9,6 @@ Just donwload the file and view locally.
 install PHP via the command line interface then run
 
 ```
-php -S localhost:80000
+php -S localhost:8000
 ```
 view in browser to see the site properly.
